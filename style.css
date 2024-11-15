@@ -1,0 +1,305 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Goldman', sans-serif;
+  color: white;
+  background: url('BG.png') no-repeat center center/cover;
+  background-position: 48% center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  user-select: none;
+}
+
+/* Main Content */
+.content {
+  text-align: center;
+  z-index: 1;
+}
+
+.logo {
+  width: 15vw;
+  margin-bottom: 1.5vw;
+  user-select: none;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 4vw;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -2px 2px 10px rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0px rgb(0, 0, 0);
+  padding-bottom: 0px;
+  margin-top: -1vw;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 1vw;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.social-media {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-media a {
+  margin: 0 10px;
+}
+
+footer hr {
+  border: 0.1vw solid rgba(255, 255, 255, 0.767);
+  width: 70%;
+  margin: 0.5vw auto;
+}
+
+/* Social Media Icons - Individual Sizes and Hover Effects */
+.icon-Gmail {
+  width: 2vw;
+  transition: transform 0.3s;
+}
+
+.icon-Gmail:hover {
+  transform: scale(1.1);
+}
+
+.icon-linkedin {
+  width: 1.8vw;
+  transition: transform 0.3s;
+}
+
+.icon-linkedin:hover {
+  transform: scale(1.1);
+}
+
+.icon-twitter {
+  width: 2vw;
+  transition: transform 0.3s;
+}
+
+.icon-twitter:hover {
+  transform: scale(1.1);
+}
+
+.icon-instagram {
+  width: 1.8vw;
+  transition: transform 0.3s;
+}
+
+.icon-instagram:hover {
+  transform: scale(1.1);
+}
+
+.icon-facebook {
+  width: 2vw;
+  transition: transform 0.3s;
+}
+
+.icon-facebook:hover {
+  transform: scale(1.1);
+}
+
+.icon-youtube {
+  width: 2.1vw;
+  transition: transform 0.3s;
+}
+
+.icon-youtube:hover {
+  transform: scale(1.1);
+}
+
+/* Call Icon */
+.call-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.5vw;
+}
+
+.call-icon img {
+  width: 1.8vw;
+  transition: transform 0.3s;
+}
+
+.call-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Drop-Up Menu */
+.drop-up-menu {
+  position: absolute;
+  bottom: 2.5vw;
+  right: 10vw;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 0.8vw;
+  border-radius: 1vw;
+  display: none;
+  z-index: 2;
+  width: max-content;
+}
+
+.drop-up-menu.show {
+  display: block;
+}
+
+.drop-up-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.drop-up-menu li {
+  color: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  padding: 0.3vw 0;
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-size: cover;
+    background-position: 48.5% center;
+  }
+
+  h1 {
+    font-size: 9vw;
+    margin-bottom: 1vw; /* Add space between logo and heading */
+  }
+
+  .logo {
+    width: 35vw;
+    margin-top: 10vw; 
+    margin-bottom: 3vw;
+  }
+
+  .social-media {
+    align-items: center;
+  }
+
+  .social-media a {
+    margin: 1vw;
+  }
+
+  .social-media img {
+    width: 4vw; /* Make icons smaller on mobile */
+  }
+
+  .drop-up-menu {
+    right: 50%; /* Adjusted to fit smaller screens */
+    bottom: 10vw;
+    position: absolute;
+    left: 50%; /* Start from the center horizontally */
+    transform: translateX(-50%); /* Center align the menu */
+  }
+
+  .drop-up-menu li {
+    color: rgb(0, 0, 0);
+    font-size: 2vw;
+    padding: 0.5vw 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background: url('BG phone.png') no-repeat center center/cover; /* Different background for mobile */
+    background-size: cover;
+    background-position: 50% center;
+  }
+
+  .logo {
+    width: 40vw;
+    margin-top: 10vw; /* Move the logo a bit higher on phone */
+    margin-bottom: 40vw;
+  }
+
+  h1 {
+    font-size: 10vw ;
+    margin-bottom: 2vw; /* Add space between logo and heading */
+    background: linear-gradient(to right, #000000, #b3b3b3, #ffffff, #ffffff, #ffffff, #b3b3b3, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -2px 2px 10px rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 0px rgb(0, 0, 0);
+  }
+
+  .social-media a {
+    margin: 1.4vw;
+  }
+
+  .social-media img {
+    width: 6vw; /* Make icons smaller on mobile */
+  }
+
+  .drop-up-menu {
+    right: 50%; /* Adjusted to fit smaller screens */
+    bottom: 15vw;
+    position: absolute;
+    left: 50%; /* Start from the center horizontally */
+    transform: translateX(-50%); /* Center align the menu */
+  }
+
+  .drop-up-menu ul li {
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    padding: 0.5vw 0;
+  }
+    
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-size: cover;
+    background-position: 47.3% center;
+  }
+
+  .logo {
+    width: 15vw; /* Smaller logo size for horizontal layout */
+    margin-top: 0vw; /* Reduce top margin to utilize space better */
+    margin-bottom: 0.1vw; /* Reduced spacing between logo and h1 */
+  }
+
+  h1 {
+    font-size: 3.8vw; /* Reduced font size to fit the shorter height */
+    margin-top: 1vw; /* Reduced top margin to move h1 closer to logo */
+    margin-bottom: 1vw; /* Maintain spacing below the heading */
+    line-height: 0.6; /* Reduce line height to bring the lines closer */
+  }
+
+  .social-media a {
+    margin: 0.4vw; /* Reduce margin for better alignment */
+  }
+
+  .social-media img {
+    width: 2vw; /* Smaller icons for compact layout */
+  }
+
+  .drop-up-menu {
+    right: 3%; /* Position the menu to the right side */
+    bottom: 4vw; /* Adjust bottom spacing for shorter height */
+    left: auto; /* Remove centering adjustments */
+    transform: none; /* Disable transform */
+  }
+
+  .drop-up-menu ul li {
+    color: rgb(0, 0, 0);
+    font-size: 1vw; /* Reduce font size for compact design */
+    padding: 0.2vw 0; /* Adjust padding for spacing */
+  }
+}
